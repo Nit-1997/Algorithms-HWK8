@@ -120,6 +120,7 @@ public class Hash {
   public void increase(String key) {
     try {
       int val = this.find(key);
+      this.delete(key);
       this.insert(key, val + 1);
     } catch (Exception e) {
       // key not present
@@ -266,6 +267,17 @@ public class Hash {
     variance = variance / n;
 
     return variance;
+  }
+
+  public void printTop10Perc(){
+    int[] collisionList = getCollosionList();
+    Arrays.sort(collisionList);
+    int n = this.MAX;
+    n = n/10;
+    System.out.println("printing top 10% collision list sizes");
+    for(int i = 0 ; i < n ; i++){
+      System.out.println(collisionList[i]+ "  ,  ");
+    }
   }
 
 }

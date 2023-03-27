@@ -26,9 +26,10 @@ public class skipListTests {
     list.insert(329);
      list.print();
 
+    System.out.println("LOOKUP FOR 32");
     System.out.println(list.search(32).key);
 
-    list.delete(20);
+    //list.delete(20);
     list.print();
   }
 }

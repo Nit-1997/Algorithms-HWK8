@@ -53,5 +53,9 @@ public class HashTests {
     map.printHistogram();
 
 
+    //map.printTable();
+    // System.out.println(map.find("about"));
+   // System.out.println("***********************************************************************After delete*******************************");
+   // map.printTable();
   }
 }
